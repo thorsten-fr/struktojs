@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Struktogramm → JavaScript</title>
-  
 
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 20px;
-    }
-    label {
-      display: block;
-      margin: 8px 0;
-    }
-    #operatorForm {
-      margin: 15px 0;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      min-height: 60px;
-    }
-    #codeOutput {
-      width: 100%;
-      box-sizing: border-box;
-      font-family: "Courier New", monospace;
-    }
-  </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Struktogramm → JavaScript</title>
+
+
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+        }
+
+        #operatorForm {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            min-height: 60px;
+        }
+
+        #codeOutput {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: "Courier New", monospace;
+        }
+    </style>
 </head>
+
 <body>
 
-  <h1>Struktogramm → JavaScript</h1>
+    <h1>Struktogramm → JavaScript</h1>
 
-  <label>
-    Anweisung:
-    <select id="operatorSelect">
-      <option value="">--- Anweisung auswählen ---</option>
-      <option value="declaration">Deklaration</option>
-      <option value="initialisierung">Initialisierung</option>
-      <option value="deklaration_init">Deklaration und Initialisierung</option>
-      <option value="zuweisung">Zuweisung</option>
-      <option value="einlesen_dialog_decl">Einlesen mit Deklaration (Dialogfenster)</option>
-      <option value="einlesen_dialog">Einlesen (Dialogfenster)</option>
-      <option value="ausgabe_konsole">Ausgabe (Konsole)</option>
-      <option value="wenn_dann">Wenn, dann</option>
-      <option value="wenn_dann_sonst">Wenn, dann, sonst</option>
-      <option value="while">Wiederhole solange (while)</option>
-      <option value="for">Zähle solange (for)</option>
-    </select>
-  </label>
+    <label>
+        Anweisung:
+        <select id="operatorSelect">
+            <option value="">--- Anweisung auswählen ---</option>
+            <option value="declaration">Deklaration</option>
+            <option value="initialisierung">Initialisierung</option>
+            <option value="deklaration_init">Deklaration und Initialisierung</option>
+            <option value="zuweisung">Zuweisung</option>
+            <option value="einlesen_dialog_decl">Deklaration und Einlesen (Dialogfenster)</option>
+            <option value="einlesen_dialog">Einlesen (Dialogfenster)</option>
+            <option value="ausgabe">Ausgabe</option>
+            <option value="ausgabe_zeilenweise">Zeilenweise Ausgabe</option>
+            <option value="wenn_dann">Wenn, dann</option>
+            <option value="wenn_dann_sonst">Wenn, dann, sonst</option>
+            <option value="while">Wiederhole solange (while)</option>
+            <option value="for">Zähle solange (for)</option>
+        </select>
+    </label>
 
-  <div id="operatorForm">
-    <!-- Dynamische Eingabefelder erscheinen hier -->
-  </div>
+    <div id="operatorForm">
+        <!-- Dynamische Eingabefelder erscheinen hier -->
+    </div>
 
-  <button id="applyBtn" disabled>Übernehmen</button>
-<button id="clearBtn" style="margin-left:10px;">JS-Programm löschen</button>
-
-
-  <h2>JavaScript-Programm</h2>
-  <textarea id="codeOutput" rows="15" spellcheck="false"></textarea>
-
- 
-  <p>
-    Den Inhalt kannst du in dein HTML in ein
-    <code>&lt;script&gt;...&lt;/script&gt;</code> kopieren.
-  </p>
+    <button id="applyBtn" disabled>Übernehmen</button>
+    <button id="clearBtn" style="margin-left:10px;">JS-Programm löschen</button>
 
 
-  <script src="lib/app.js"></script>
+    <h2>JavaScript-Programm</h2>
+    <textarea id="codeOutput" rows="15" spellcheck="false"></textarea>
+
+
+    <p>
+        Den Inhalt kannst du in dein HTML in ein
+        <code>&lt;script&gt;...&lt;/script&gt;</code> kopieren.
+    </p>
+
+
+    <script src="lib/app.js"></script>
 </body>
+
 </html>
