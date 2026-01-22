@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Struktogramm → JavaScript</title>
 
-
     <style>
         body {
             font-family: system-ui, sans-serif;
@@ -30,55 +29,94 @@
             box-sizing: border-box;
             font-family: "Courier New", monospace;
         }
+
+        #htmlPreview {
+            background: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 80px;
+            white-space: pre;
+        }
     </style>
 </head>
 
 <body>
 
-    <h1>Struktogramm → JavaScript</h1>
-    <h6>by Th. Freimann</h6>
+<h1>Struktogramm → JavaScript</h1>
+<h6>by Th. Freimann</h6>
 
-    <label>
-        Anweisung:
-        <select id="operatorSelect">
-            <option value="">--- Anweisung auswählen ---</option>
-            <option value="declaration">Deklaration</option>
-            <option value="initialisierung">Initialisierung</option>
-            <option value="deklaration_init">Deklaration und Initialisierung</option>
-            <option value="zuweisung">Zuweisung</option>
-            <option value="einlesen">Einlesen: variable |als datentyp|</option>
-            <option value="ausgabe">Ausgabe</option>
-            <option value="ausgabe_zeilenweise">Zeilenweise Ausgabe</option>
-            <option value="wenn_dann">Wenn, dann</option>
-            <option value="wenn_dann_sonst">Wenn, dann, sonst</option>
-            <option value="while">Wiederhole solange (while)</option>
-            <option value="for">Zähle solange (for)</option>
-        </select>
-    </label>
+<label>
+    Anweisung:
+    <select id="operatorSelect">
+        <option value="">--- Anweisung auswählen ---</option>
+        <option value="declaration">Deklaration</option>
+        <option value="initialisierung">Initialisierung</option>
+        <option value="deklaration_init">Deklaration und Initialisierung</option>
+        <option value="zuweisung">Zuweisung</option>
+        <option value="einlesen">Einlesen: variable |als datentyp|</option>
+        <option value="ausgabe">Ausgabe</option>
+        <option value="ausgabe_zeilenweise">Zeilenweise Ausgabe</option>
+        <option value="wenn_dann">Wenn, dann</option>
+        <option value="wenn_dann_sonst">Wenn, dann, sonst</option>
+        <option value="while">Wiederhole solange (while)</option>
+        <option value="for">Zähle solange (for)</option>
+    </select>
+</label>
 
-    <div id="operatorForm">
-        <!-- Dynamische Eingabefelder erscheinen hier -->
+<!-- Zweispaltiges Layout -->
+<div style="display:flex; gap:20px; align-items:flex-start;">
+
+    <!-- links: Formular -->
+    <div style="flex:2;">
+        <div id="operatorForm"></div>
     </div>
 
-    <button id="applyBtn" disabled>Übernehmen</button>
-    <button onclick="showPopup()" style="margin-left:10px;">
+    
+
+</div>
+
+<br>
+
+<button id="applyBtn" disabled>Übernehmen</button>
+
+<button onclick="showPopup()" style="margin-left:10px;">
     HTML-Grundgerüst anzeigen
 </button>
 
-    <button id="clearBtn" style="margin-left:10px;">JS-Programm löschen</button>
+<button id="clearBtn" style="margin-left:10px;">
+    JS-Programm löschen
+</button>
 
+<h2>JavaScript-Programm</h2>
 
-    <h2>JavaScript-Programm</h2>
-    <textarea id="codeOutput" rows="15" spellcheck="false"></textarea>
+<div style="display:flex; gap:20px; align-items:flex-start;">
 
+  <!-- JavaScript -->
+  <div style="flex:2;">
+    <textarea id="codeOutput" rows="15" spellcheck="false"
+              style="width:100%; font-family:Courier New, monospace;"></textarea>
+  </div>
 
-    <p>
-        Den Inhalt kannst du in dein HTML in ein
-        <code>&lt;script&gt;...&lt;/script&gt;</code> kopieren.
-    </p>
+  <!-- Beispiel-HTML -->
+  <!-- rechts: Beispiel-HTML -->
+    <div style="flex:1;">
+        <h4>Beispiel: HTML</h4>
+        <pre id="htmlPreview"></pre>
+    </div>
 
+</div>
 
-    <script src="lib/app.js"></script>
+<p>
+  Den Inhalt kannst du in dein HTML in ein
+  <code>&lt;script&gt;...&lt;/script&gt;</code> kopieren.
+</p>
+
+<p>
+    Den Inhalt kannst du in dein HTML in ein
+    <code>&lt;script&gt;...&lt;/script&gt;</code> kopieren.
+</p>
+
+<script src="lib/app.js"></script>
+
 </body>
-
 </html>
